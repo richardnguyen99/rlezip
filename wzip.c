@@ -22,7 +22,7 @@ int main(int argc, char **argv)
         int count = 0;
         char c, last;
 
-        while ((c = fgetc(fp)) == EOF)
+        while ((c = fgetc(fp)) != EOF)
         {
             if (count && c != last)
             {
@@ -31,7 +31,7 @@ int main(int argc, char **argv)
                 count = 0;
             }
 
-            last = 0;
+            last = c;
             count++;
         }
 

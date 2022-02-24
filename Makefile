@@ -3,6 +3,9 @@ FLAGS=-Wall -Werror -c
 
 all: wzip pzip
 
+test:
+	./test.sh
+
 wzip: wzip.o
 	$(CC) wzip.o -o wzip
 
@@ -16,4 +19,4 @@ wzip.o: wzip.c
 	$(CC) $(FLAGS) wzip.c
 
 clean:
-	rm -rf *.o *.out pzip wzip
+	rm -rf *.o *.out *.z pzip wzip
